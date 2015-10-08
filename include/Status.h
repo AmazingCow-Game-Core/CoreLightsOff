@@ -3,7 +3,7 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        Light.h                                   //
+//            █ █        █ █        Status.h                                  //
 //             ████████████         LightsOff Core                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
@@ -39,40 +39,32 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_Light_h__
-#define __LightsOffCore_include_Light_h__
+#ifndef __LightsOffCore_include_Status_h__
+#define __LightsOffCore_include_Status_h__
 
 //std
 #include <vector>
+#include <ostream>
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
-#include "Coord.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
-class Light
+// Enums //
+
+///@brief Defines the possible states of Game Core.
+///@see GameCore.
+enum class Status 
 {
-    
-    // CTOR/DTOR //
-public:
-    Light(bool on, const CoordVec &affectRange);
-
-    // Public Methods //
-public:
-    void changeState();
-
-    bool isOn() const;
-    const CoordVec& getAffectRange() const;
-
-    // iVars //
-private:
-    bool     m_isOn;
-    CoordVec m_affectRange;
+    Victory, ///< Game is over - Player won, i.e. All lights are off..
+    Defeat,  ///< Game is over - Player lose i.e. Not all lights are off and
+             ///                 and no moves are available.
+    Continue ///< Game is not over - Keep playing...
 };
 
-///@brief Typedef to ease the typing of "a matrix of LightsOffTypes".
-///@see Light
-typedef std::vector<std::vector<Light>> Board;
+///@brief Output the name of status. (ex: Status::Victory)
+///@see Status.
+std::ostream& operator <<(std::ostream &os, Status status);
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_Light_h__) //
+#endif // defined(__LightsOffCore_include_Status_h__) //

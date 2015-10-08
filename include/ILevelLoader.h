@@ -44,12 +44,22 @@
 
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
-#include "LightsOffCore_Types.h"
+#include "Light.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
 class ILevelLoader
 {
+    // CTOR/DTOR //
+public:
+    ILevelLoader();
+    virtual ~ILevelLoader();
+
+    // Abstract Methods //
+public:
+    virtual const Board& getBoard() const = 0;
+    virtual int getLightsOnCount() const = 0;
+    virtual int getLightsOffCount() const = 0;
 };
 
 NS_LIGHTSOFFCORE_END

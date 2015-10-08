@@ -3,7 +3,7 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        LightsOffCore_Types.h                     //
+//            █ █        █ █        Status.cpp                                //
 //             ████████████         LightsOff Core                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
@@ -39,42 +39,18 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_LightsOffCore_Types_h__
-#define __LightsOffCore_include_LightsOffCore_Types_h__
+//Header
+#include "../include/Status.h"
 
-//std
-#include <vector>
-#include <ostream>
-//LightsOffCore.
-#include "LightsOffCore_Utils.h"
-#include "Coord.h" //Included here so all places can just include 
-#include "Light.h" //this header and have all types available.
-
-NS_LIGHTSOFFCORE_BEGIN
+//Usings
+USING_NS_LIGHTSOFFCORE;
 
 // Enums //
-
-///@brief Defines the possible states of Game Core.
-///@see GameCore.
-enum class Status 
+std::ostream& LightsOffCore::operator <<(std::ostream &os, Status status)
 {
-    Victory, ///< Game is over - Player won, i.e. All lights are off..
-    Defeat,  ///< Game is over - Player lose i.e. Not all lights are off and
-             ///                 and no moves are available.
-    Continue ///< Game is not over - Keep playing...
-};
+    os << ((status == Status::Continue) ? "Status::Continue" :
+           (status == Status::Defeat  ) ? "Status::Defeat"   :
+                                          "Status::Victory");
 
-///@brief Output the name of status. (ex: Status::Victory)
-///@see Status.
-std::ostream& operator <<(std::ostream &os, Status status);
-
-
-// Typedefs //
-
-///@brief Typedef to ease the typing of "a matrix of LightsOffTypes".
-///@see Light
-typedef std::vector<std::vector<Light>> Board;
-
-
-NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_LightsOffCore_Types_h__) //
+    return os;
+}

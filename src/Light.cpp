@@ -3,7 +3,7 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        LightsOffCore_Types.cpp                   //
+//            █ █        █ █        Light.cpp                                 //
 //             ████████████         LightsOff Core                            //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
@@ -40,17 +40,30 @@
 //----------------------------------------------------------------------------//
 
 //Header
-#include "../include/LightsOffCore_Types.h"
+#include "../include/Light.h"
 
-//Usings
+//Usings.
 USING_NS_LIGHTSOFFCORE;
 
-// Enums //
-std::ostream& LightsOffCore::operator <<(std::ostream &os, Status status)
+// CTOR/DTOR //
+Light::Light(bool on, const CoordVec &affectRange) :
+    m_isOn(on),
+    m_affectRange(affectRange)
 {
-    os << ((status == Status::Continue) ? "Status::Continue" :
-           (status == Status::Defeat  ) ? "Status::Defeat"   :
-                                          "Status::Victory");
+    //Empty...
+}
 
-    return os;
+// Public Methods //
+void Light::changeState()
+{
+    m_isOn = !m_isOn;
+}
+
+bool Light::isOn() const
+{
+    return m_isOn;
+}
+const CoordVec& Light::getAffectRange() const
+{
+    return m_affectRange;
 }

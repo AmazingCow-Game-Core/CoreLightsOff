@@ -40,7 +40,7 @@
 //----------------------------------------------------------------------------//
 
 //Header
-#include "../include/FileLevelLoader.h"
+#include "../include/Coord.h"
 
 //Usings.
 USING_NS_LIGHTSOFFCORE;

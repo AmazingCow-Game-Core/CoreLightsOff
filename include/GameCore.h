@@ -46,13 +46,56 @@
 #include <string>
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
-#include "LightsOffCore_Types.h"
+#include "Status.h"
+#include "Light.h"
+#include "Coord.h"
 #include "ILevelLoader.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
 class GameCore
 {
+    // Constants //
+public:
+    static const int kUnlimitedMoves;
+
+    // CTOR/DTOR //
+public:
+    GameCore(const ILevelLoader &loader, int maxMoves = kUnlimitedMoves);
+
+    // Public Methods //
+public:
+    const Board& getBoard() const;
+     
+    CoordVec changeLightStateAt(const Coord &coord);
+
+    const Light& getLightAt(const Coord &coord) const;
+    int getLightsOnCount() const;
+    int getLightsOffCount() const;
+
+    Status getStatus() const;
+
+    int getMovesCount() const;
+    int getMaxMovesCount() const;
+
+    bool isValidCoord(const Coord &coord) const;
+
+    // Private Methods //
+private:
+    void changeLightStateHelper(Light &light);
+    void checkStatus();
+
+    // iVars //
+private:
+    Board m_board;
+    
+    int m_lightsOnCount;
+    int m_lightOffCount;
+    
+    Status m_status;
+
+    int m_movesCount;
+    int m_maxMovesCount;
 };
 
 NS_LIGHTSOFFCORE_END

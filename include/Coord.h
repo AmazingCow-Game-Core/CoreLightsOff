@@ -39,12 +39,14 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_ILevelLoader_h__
-#define __LightsOffCore_include_ILevelLoader_h__
+#ifndef __LightsOffCore_include_Coord_h__
+#define __LightsOffCore_include_Coord_h__
 
+//std
+#include <ostream>
+#include <vector>
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
-#include "LightsOffCore_Types.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
@@ -101,5 +103,9 @@ public:
     int x, y;
 };
 
+///@brief Typedef to ease the typing of "a vector of Coords".
+///@see Coord
+typedef std::vector<Coord> CoordVec;
+
 NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_ILevelLoader_h__) //
+#endif // defined(__LightsOffCore_include_Coord_h__) //

@@ -48,7 +48,9 @@
 //this file alone and let it makes all the job. :)
 
 #include "LightsOffCore_Utils.h"
-#include "LightsOffCore_Types.h"
+#include "Light.h"
+#include "Status.h"
+#include "Coord.h"
 #include "GameCore.h"
 #include "ILevelLoader.h"
 #include "FileLevelLoader.h"

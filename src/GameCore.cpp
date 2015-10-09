@@ -42,8 +42,12 @@
 //Header
 #include "../include/GameCore.h"
 
+//std
+#include <sstream>
+
 //Usings.
 USING_NS_LIGHTSOFFCORE;
+
 
 // Constants //
 const int GameCore::kUnlimitedMoves = -1;
@@ -78,27 +82,24 @@ CoordVec GameCore::changeLightStateAt(const Coord &coord)
     if(!isValidCoord(coord) || m_status != Status::Continue)
         return affectedCoords;
 
-
     //Get the light at coord and all the coords that
     //this light will affect if change the state.
-    auto light       = getLightAt(coord);
-    auto rangeCoords = light.getAffectRange();
-
+    auto light = getLightAt(coord);
+    
     //Remove the coords that is not valid in this board.
-    rangeCoords.erase(std::remove_if(
-                        begin(rangeCoords), 
-                        end(rangeCoords),
-                        [this](Coord coord) {
-                            return isValidCoord(coord);
-                        }));
-
-    //Change the state of the light and all 
-    //lights that it's affects.
-    changeLightStateHelper(light); //The target light.
-    for(auto affectCoord : rangeCoords)
+    for(auto &offsetCoord : light.getAffectOffsetRange())
     {
-        auto affectedLight = getLightAt(affectCoord);
-        changeLightStateHelper(const_cast<Light &>(affectedLight)); //The affected light.
+        auto rangeCoord = (coord + offsetCoord);
+        if(isValidCoord(rangeCoord))
+            affectedCoords.push_back(rangeCoord);
+    }
+
+    //Change the state of the affected ligths.
+    affectedCoords.push_back(coord); //Add the original coord to affected list.
+    for(auto affectCoord : affectedCoords)
+    {
+        auto &affectedLight = getLightAt(affectCoord);
+        changeLightStateHelper(const_cast<Light &>(affectedLight));
     }
 
 
@@ -108,7 +109,7 @@ CoordVec GameCore::changeLightStateAt(const Coord &coord)
     //Check the current game status.
     checkStatus();
 
-    return rangeCoords;
+    return affectedCoords;
 }
 
 const Light& GameCore::getLightAt(const Coord &coord) const
@@ -146,6 +147,22 @@ bool GameCore::isValidCoord(const Coord &coord) const
         && (coord.x >= 0 && coord.x < m_board[coord.y].size());
 }
 
+std::string GameCore::ascii() const
+{
+    std::stringstream ss;
+
+    for(auto &line : m_board)
+    {
+        for(auto &light : line)
+        {
+            ss << (light.isOn() ? "o "  : ". ");
+        }
+        ss << std::endl;
+    }
+
+    return ss.str();
+}
+
 // Private Methods //
 void GameCore::changeLightStateHelper(Light &light)
 {
@@ -170,11 +187,17 @@ void GameCore::checkStatus()
 {
     //No lights on - Game is over - Player Won.
     if(m_lightsOnCount == 0)
+    {
         m_status = Status::Victory;
+        return;
+    }
 
     //Has lights on - Player exceeds the max moves - Player Lose
     if(m_maxMovesCount != kUnlimitedMoves && m_movesCount >= m_maxMovesCount)
+    {
         m_status = Status::Defeat;
+        return;
+    }
 
     //Has lights on but unlimited moves... Keep playing....
 }

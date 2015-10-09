@@ -80,6 +80,8 @@ public:
 
     bool isValidCoord(const Coord &coord) const;
 
+    std::string ascii() const;
+    
     // Private Methods //
 private:
     void changeLightStateHelper(Light &light);

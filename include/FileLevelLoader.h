@@ -47,24 +47,33 @@
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
 #include "Light.h"
-
 #include "ILevelLoader.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
 class FileLevelLoader : public ILevelLoader
 {
+    // Constants //
+public:
+    static const char kLightOnChar;
+    static const char kLightOffChar;
+
     // CTOR/DTOR //
 public:
     FileLevelLoader(const std::string &filename);
     virtual ~FileLevelLoader();
     
-    // Abstract Methods //
+    // Overriden Methods //
 public:
     const Board& getBoard() const override;
     int getLightsOnCount() const override;
     int getLightsOffCount() const override;
     
+    // iVars //
+private:
+    Board m_board;
+    int   m_lightsOnCount;
+    int   m_lightsOffCount;
 };
 
 NS_LIGHTSOFFCORE_END

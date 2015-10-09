@@ -41,3 +41,63 @@
 
 //Header
 #include "../include/FileLevelLoader.h"
+//LightsOffCore.
+#include "../include/Coord.h"
+//std
+#include <fstream>
+
+#include <iostream>
+using namespace std;
+
+//Usings.
+USING_NS_LIGHTSOFFCORE;
+
+
+// Constants //
+const char FileLevelLoader::kLightOnChar  = 'o';
+const char FileLevelLoader::kLightOffChar = '.';
+
+// CTOR/DTOR //
+FileLevelLoader::FileLevelLoader(const std::string &filename) :
+    m_lightsOnCount(0),
+    m_lightsOffCount(0)
+{
+    std::ifstream infile(filename.c_str());
+    
+    auto orthogonalCoords = Coord().getOrthogonalCoords();
+
+    for(std::string line; std::getline(infile, line); /*None*/ )
+    {
+        //Create a row of ligths...
+        m_board.push_back(std::vector<Light>());
+        
+        for(auto &ch : line)
+        {        
+            auto isOn = ch == FileLevelLoader::kLightOnChar;
+
+            auto light = Light(isOn, orthogonalCoords);
+            m_board[m_board.size()-1].push_back(light);
+            
+            m_lightsOnCount  += (isOn) ? 1 : 0;
+            m_lightsOffCount += (isOn) ? 0 : 1;
+        }
+    }
+}
+FileLevelLoader::~FileLevelLoader()
+{
+    //Empty...
+}
+
+// Overriden Methods //
+const Board& FileLevelLoader::getBoard() const
+{
+    return m_board;
+}
+int FileLevelLoader::getLightsOnCount() const
+{
+    return m_lightsOnCount;
+}
+int FileLevelLoader::getLightsOffCount() const
+{
+    return m_lightsOffCount;
+}

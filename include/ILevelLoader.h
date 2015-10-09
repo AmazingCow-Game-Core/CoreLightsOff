@@ -52,8 +52,8 @@ class ILevelLoader
 {
     // CTOR/DTOR //
 public:
-    ILevelLoader();
-    virtual ~ILevelLoader();
+    ILevelLoader() { /* Empty */ }
+    virtual ~ILevelLoader() { /* Empty */ }
 
     // Abstract Methods //
 public:

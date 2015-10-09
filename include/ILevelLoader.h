@@ -52,13 +52,32 @@ class ILevelLoader
 {
     // CTOR/DTOR //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     ILevelLoader() { /* Empty */ }
+
+    ///@brief
+    ///@returns
+    ///@see
     virtual ~ILevelLoader() { /* Empty */ }
+
 
     // Abstract Methods //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     virtual const Board& getBoard() const = 0;
+
+    ///@brief
+    ///@returns
+    ///@see
     virtual int getLightsOnCount() const = 0;
+
+    ///@brief
+    ///@returns
+    ///@see
     virtual int getLightsOffCount() const = 0;
 };
 

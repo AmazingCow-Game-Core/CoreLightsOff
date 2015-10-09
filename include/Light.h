@@ -52,16 +52,30 @@ NS_LIGHTSOFFCORE_BEGIN
 
 class Light
 {
-    
     // CTOR/DTOR //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     Light(bool on, const CoordVec &affectOffsetRange);
+
 
     // Public Methods //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     void changeState();
 
+
+    ///@brief
+    ///@returns
+    ///@see
     bool isOn() const;
+
+    ///@brief
+    ///@returns
+    ///@see
     const CoordVec& getAffectOffsetRange() const;
 
     // iVars //

@@ -57,29 +57,76 @@ class GameCore
 {
     // Constants //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     static const int kUnlimitedMoves;
+
 
     // CTOR/DTOR //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     GameCore(const ILevelLoader &loader, int maxMoves = kUnlimitedMoves);
+
 
     // Public Methods //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     const Board& getBoard() const;
      
+
+    ///@brief
+    ///@returns
+    ///@see
     CoordVec changeLightStateAt(const Coord &coord);
 
+
+    ///@brief
+    ///@returns
+    ///@see
     const Light& getLightAt(const Coord &coord) const;
+
+    ///@brief
+    ///@returns
+    ///@see
     int getLightsOnCount() const;
+
+    ///@brief
+    ///@returns
+    ///@see
     int getLightsOffCount() const;
 
+
+    ///@brief
+    ///@returns
+    ///@see
     Status getStatus() const;
 
+
+    ///@brief
+    ///@returns
+    ///@see
     int getMovesCount() const;
+
+    ///@brief
+    ///@returns
+    ///@see
     int getMaxMovesCount() const;
 
+
+    ///@brief
+    ///@returns
+    ///@see
     bool isValidCoord(const Coord &coord) const;
 
+
+    ///@brief
+    ///@returns
+    ///@see
     std::string ascii() const;
     
     // Private Methods //

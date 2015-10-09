@@ -106,6 +106,9 @@ public:
     ///than this coord.
     Coord getRight(int offset) const;
 
+    ///@brief
+    ///@returns
+    ///@see
     CoordVec getOrthogonalCoords() const;
     
     // iVars //

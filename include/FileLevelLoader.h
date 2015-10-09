@@ -55,19 +55,47 @@ class FileLevelLoader : public ILevelLoader
 {
     // Constants //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     static const char kLightOnChar;
+
+    ///@brief
+    ///@returns
+    ///@see
     static const char kLightOffChar;
+
 
     // CTOR/DTOR //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     FileLevelLoader(const std::string &filename);
+    
+    ///@brief
+    ///@returns
+    ///@see
     virtual ~FileLevelLoader();
     
+
     // Overriden Methods //
 public:
+    ///@brief
+    ///@returns
+    ///@see
     const Board& getBoard() const override;
+
+    ///@brief
+    ///@returns
+    ///@see
     int getLightsOnCount() const override;
+
+    ///@brief
+    ///@returns
+    ///@see
     int getLightsOffCount() const override;
+    
     
     // iVars //
 private:

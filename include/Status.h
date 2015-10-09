@@ -50,8 +50,6 @@
 
 NS_LIGHTSOFFCORE_BEGIN
 
-// Enums //
-
 ///@brief Defines the possible states of Game Core.
 ///@see GameCore.
 enum class Status 

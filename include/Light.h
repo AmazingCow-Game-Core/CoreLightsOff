@@ -55,19 +55,19 @@ class Light
     
     // CTOR/DTOR //
 public:
-    Light(bool on, const CoordVec &affectRange);
+    Light(bool on, const CoordVec &affectOffsetRange);
 
     // Public Methods //
 public:
     void changeState();
 
     bool isOn() const;
-    const CoordVec& getAffectRange() const;
+    const CoordVec& getAffectOffsetRange() const;
 
     // iVars //
 private:
     bool     m_isOn;
-    CoordVec m_affectRange;
+    CoordVec m_affectOffsetRange;
 };
 
 ///@brief Typedef to ease the typing of "a matrix of LightsOffTypes".

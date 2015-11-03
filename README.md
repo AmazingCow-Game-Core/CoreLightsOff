@@ -11,7 +11,7 @@ game alone.
 ## Files:
 We tried to separated the files in a very organized form.   
 Here is a list of them and it's intend.
-
+#COWTODO: ADD THE FILES.
 ## More info:
 We tried to document the Core extensively, so we think that is pretty ease to 
 get what the Core is doing, the API calls and stuff.   

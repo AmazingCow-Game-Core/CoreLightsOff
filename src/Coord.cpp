@@ -46,24 +46,26 @@
 USING_NS_LIGHTSOFFCORE;
 
 // Friends //
-std::ostream& LightsOffCore::operator <<(std::ostream &os, const Coord &coord)
+NS_LIGHTSOFFCORE_BEGIN
+std::ostream& operator <<(std::ostream &os, const Coord &coord)
 {
     os << "(" << coord.y << "," << coord.x << ")";
     return os;
 }
-bool LightsOffCore::operator ==(const Coord &lhs, const Coord rhs)
+bool operator ==(const Coord &lhs, const Coord rhs)
 {
     return (lhs.y == rhs.y) && (lhs.x == rhs.x);
 }
-bool LightsOffCore::operator !=(const Coord &lhs, const Coord rhs)
+bool operator !=(const Coord &lhs, const Coord rhs)
 {
     return !(lhs == rhs);
 }
 
-Coord LightsOffCore::operator +(const Coord &lhs, const Coord &rhs)
+Coord operator +(const Coord &lhs, const Coord &rhs)
 {
     return Coord(lhs.y + rhs.y, lhs.x + rhs.x);
 }
+NS_LIGHTSOFFCORE_END
 
 // CTOR/DTOR //
 Coord::Coord(int _y /* = 0 */, int _x /* = 0 */) :
@@ -91,7 +93,7 @@ Coord Coord::getRight(int offset) const
     return Coord(this->y, this->x + offset);
 }
 
-CoordVec Coord::getOrthogonalCoords() const
+Coord::CoordVec Coord::getOrthogonalCoords() const
 {
     return { getUp(1), getRight(1), getDown(1), getLeft(1) };
 }

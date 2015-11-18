@@ -52,32 +52,22 @@ class ILevelLoader
 {
     // CTOR/DTOR //
 public:
-    ///@brief
-    ///@returns
-    ///@see
     ILevelLoader() { /* Empty */ }
-
-    ///@brief
-    ///@returns
-    ///@see
     virtual ~ILevelLoader() { /* Empty */ }
 
 
     // Abstract Methods //
 public:
-    ///@brief
-    ///@returns
-    ///@see
-    virtual const Board& getBoard() const = 0;
+    ///@brief Gets the loaded board. - Must override.
+    ///@returns The loaded Board.
+    virtual const Light::Board& getBoard() const = 0;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets the number of Lights on - Must override
+    ///@returns The number of lights on.
     virtual int getLightsOnCount() const = 0;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets the number of Lights off - Must override
+    ///@returns The number of lights off.
     virtual int getLightsOffCount() const = 0;
 };
 

@@ -46,7 +46,7 @@
 USING_NS_LIGHTSOFFCORE;
 
 // CTOR/DTOR //
-Light::Light(bool on, const CoordVec &affectOffsetRange) :
+Light::Light(bool on, const Coord::CoordVec &affectOffsetRange) :
     m_isOn(on),
     m_affectOffsetRange(affectOffsetRange)
 {
@@ -63,7 +63,7 @@ bool Light::isOn() const
 {
     return m_isOn;
 }
-const CoordVec& Light::getAffectOffsetRange() const
+const Coord::CoordVec& Light::getAffectOffsetRange() const
 {
     return m_affectOffsetRange;
 }

@@ -57,78 +57,82 @@ class GameCore
 {
     // Constants //
 public:
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief A meta value meaning that player can play indefinitely.
+    ///@see GameCore::GameCore
     static const int kUnlimitedMoves;
 
 
     // CTOR/DTOR //
 public:
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Constructs the GameCore.
+    ///@param loader A ILevelLoader subclass that loads the board.
+    ///@param maxMoves How many tries player has to win the game -
+    ///Default GameCore::kUnlimitedMoves
+    ///@see GameCore::kUnlimitedMoves
     GameCore(const ILevelLoader &loader, int maxMoves = kUnlimitedMoves);
 
 
     // Public Methods //
 public:
-    ///@brief
-    ///@returns
-    ///@see
-    const Board& getBoard() const;
-     
-
-    ///@brief
-    ///@returns
-    ///@see
-    CoordVec changeLightStateAt(const Coord &coord);
+    ///@brief Gets the current state of Board.
+    ///@returns The current Board.
+    const Light::Board& getBoard() const;
 
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Change the state of Light at coord.
+    ///@param coord A valid coord, otherwise nothing will be done.
+    ///@returns A vector of affected coords, i.e. the coords lights that
+    ///changed the state.
+    ///@see GameCore::isValidCoord.
+    Coord::CoordVec changeLightStateAt(const Coord &coord);
+
+
+    ///@brief Gets the light at the given coord.
+    ///@param A valid coord, otherwise an exception will be thrown.
+    ///@returns The light reference.
+    ///@see GameCore::isValidCoord.
     const Light& getLightAt(const Coord &coord) const;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets the number of Lights on.
+    ///@returns The number of Lights on.
+    ///@see GameCore::getLightsOffCount.
     int getLightsOnCount() const;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets the number of Lights off.
+    ///@returns The number of Lights off.
+    ///@see GameCore::getLightsOnCount.
     int getLightsOffCount() const;
 
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Get the current status of game.
+    ///@returns the current status of game.
+    ///@see Status, GameCore::getMovesCount,
+    ///GameCore::getMaxMovesCount, GameCore::kUnlimitedMoves.
     Status getStatus() const;
 
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Get how many moves the player did so far.
+    ///@returns The number of player's moves.
+    ///@see Status, GameCore::getMaxMovesCount,
+    ///GameCore::kUnlimitedMoves.
     int getMovesCount() const;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Get how many moves the player can do.
+    ///@returns The number of moves or GameCore::kUnlimitedMoves
+    ///if there is no restriction..
+    ///@see Status, GameCore::getMovesCount,
+    ///GameCore::kUnlimitedMoves
     int getMaxMovesCount() const;
 
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Check if a given coord is inside of Board bounds.
+    ///@returns true if coord is valid, false otherwise.
     bool isValidCoord(const Coord &coord) const;
 
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Return a nice string representation.
     std::string ascii() const;
-    
+
     // Private Methods //
 private:
     void changeLightStateHelper(Light &light);
@@ -136,11 +140,11 @@ private:
 
     // iVars //
 private:
-    Board m_board;
-    
+    Light::Board m_board;
+
     int m_lightsOnCount;
     int m_lightOffCount;
-    
+
     Status m_status;
 
     int m_movesCount;

@@ -52,7 +52,7 @@ NS_LIGHTSOFFCORE_BEGIN
 
 ///@brief Defines the possible states of Game Core.
 ///@see GameCore.
-enum class Status 
+enum class Status
 {
     Victory, ///< Game is over - Player won, i.e. All lights are off..
     Defeat,  ///< Game is over - Player lose i.e. Not all lights are off and

@@ -49,15 +49,14 @@
 #include "LightsOffCore_Utils.h"
 
 NS_LIGHTSOFFCORE_BEGIN
-//Just declare the Coord type for the following typedef.
-class Coord;
-
-///@brief Typedef to ease the typing of "a vector of Coords".
-///@see Coord
-typedef std::vector<Coord> CoordVec;
 
 class Coord
 {
+    // Enums/Constants/Typdefs //
+public:
+    ///@brief Typedef to ease the typing of "a vector of Coords".
+    typedef std::vector<Coord> CoordVec;
+
     // Friends //
 public:
     ///@brief Output a string representation in for of (y, x).
@@ -68,7 +67,7 @@ public:
 
     ///@brief Check if two coords have the different y and x.
     friend bool operator !=(const Coord &lhs, const Coord rhs);
-    
+
     ///@brief Adds the y and x.
     friend Coord operator +(const Coord &lhs, const Coord &rhs);
 
@@ -84,7 +83,7 @@ public:
 public:
     ///@brief Gets a Coord that is top of this coord.
     ///@param offset How many times it will be on top.
-    ///@returns A coord that have the y coordinate "offset" times less 
+    ///@returns A coord that have the y coordinate "offset" times less
     ///than this coord.
     Coord getUp(int offset) const;
 
@@ -110,10 +109,10 @@ public:
     ///@returns
     ///@see
     CoordVec getOrthogonalCoords() const;
-    
+
     // iVars //
 public:
-    int x, y;
+    int y, x;
 };
 
 

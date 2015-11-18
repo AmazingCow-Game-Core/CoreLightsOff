@@ -55,53 +55,44 @@ class FileLevelLoader : public ILevelLoader
 {
     // Constants //
 public:
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief The char that represents the Light On.
     static const char kLightOnChar;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief The char that represents the Light Off.
     static const char kLightOffChar;
 
 
     // CTOR/DTOR //
 public:
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Loads the Board from file located in filename.
     FileLevelLoader(const std::string &filename);
-    
-    ///@brief
-    ///@returns
-    ///@see
+
+    ///@brief Virtual destructor.
     virtual ~FileLevelLoader();
-    
+
 
     // Overriden Methods //
 public:
-    ///@brief
-    ///@returns
-    ///@see
-    const Board& getBoard() const override;
+    ///@brief Gets the board loaded.
+    ///@returns The reference for the board.
+    const Light::Board& getBoard() const override;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets how many lighs are on.
+    ///@returns The lights on count.
+    ///@see FileLevelLoader::getLightsOff
     int getLightsOnCount() const override;
 
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets how many lighs are off.
+    ///@returns The lights off count.
+    ///@see FileLevelLoader::getLightsOn
     int getLightsOffCount() const override;
-    
-    
+
+
     // iVars //
 private:
-    Board m_board;
-    int   m_lightsOnCount;
-    int   m_lightsOffCount;
+    Light::Board m_board;
+    int          m_lightsOnCount;
+    int          m_lightsOffCount;
 };
 
 NS_LIGHTSOFFCORE_END

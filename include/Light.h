@@ -52,41 +52,43 @@ NS_LIGHTSOFFCORE_BEGIN
 
 class Light
 {
+    // Enums/Constants/Typdefs //
+public:
+    ///@brief Typedef to ease the typing of "a matrix of LightsOffTypes".
+    typedef std::vector<std::vector<Light>> Board;
+
+
     // CTOR/DTOR //
 public:
-    ///@brief
-    ///@returns
-    ///@see
-    Light(bool on, const CoordVec &affectOffsetRange);
+    ///@brief Constructs a Light.
+    ///@param on If the Light state is on at beginning.
+    ///@param affectOffsetRange The coords that this light will affect
+    ///when its state changes.
+    ///@see Light::changeState, Light::isOn, Light::getAffectedOffsetRange.
+    Light(bool on, const Coord::CoordVec &affectOffsetRange);
 
 
     // Public Methods //
 public:
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Change the state of the light.
     void changeState();
 
-
-    ///@brief
-    ///@returns
-    ///@see
+    ///@brief Gets the state of the light.
+    ///@returns true if Light is on, false otherwise.
     bool isOn() const;
 
-    ///@brief
-    ///@returns
-    ///@see
-    const CoordVec& getAffectOffsetRange() const;
+    ///@brief Get all the coords that this Light affects
+    ///when it changes the state.
+    ///@returns The affected range.
+    const Coord::CoordVec& getAffectOffsetRange() const;
 
     // iVars //
 private:
-    bool     m_isOn;
-    CoordVec m_affectOffsetRange;
+    bool            m_isOn;
+    Coord::CoordVec m_affectOffsetRange;
 };
 
-///@brief Typedef to ease the typing of "a matrix of LightsOffTypes".
-///@see Light
-typedef std::vector<std::vector<Light>> Board;
+
 
 NS_LIGHTSOFFCORE_END
 #endif // defined(__LightsOffCore_include_Light_h__) //

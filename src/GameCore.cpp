@@ -53,7 +53,7 @@ USING_NS_LIGHTSOFFCORE;
 const int GameCore::kUnlimitedMoves = -1;
 
 // CTOR/DTOR //
-GameCore::GameCore(const ILevelLoader &loader, 
+GameCore::GameCore(const ILevelLoader &loader,
                    int maxMoves /* = kUnlimitedMoves */) :
 
     m_board        (loader.getBoard()),
@@ -67,16 +67,16 @@ GameCore::GameCore(const ILevelLoader &loader,
 }
 
 // Public Methods //
-const Board& GameCore::getBoard() const
+const Light::Board& GameCore::getBoard() const
 {
     return m_board;
 }
- 
-CoordVec GameCore::changeLightStateAt(const Coord &coord)
+
+Coord::CoordVec GameCore::changeLightStateAt(const Coord &coord)
 {
     //All coords for lights that changed the state.
-    CoordVec affectedCoords;
-    
+    Coord::CoordVec affectedCoords;
+
     //No valid coord, no affected coords.
     //Game is over, no affected coords.
     if(!isValidCoord(coord) || m_status != Status::Continue)
@@ -85,7 +85,7 @@ CoordVec GameCore::changeLightStateAt(const Coord &coord)
     //Get the light at coord and all the coords that
     //this light will affect if change the state.
     auto light = getLightAt(coord);
-    
+
     //Remove the coords that is not valid in this board.
     for(auto &offsetCoord : light.getAffectOffsetRange())
     {
@@ -102,10 +102,9 @@ CoordVec GameCore::changeLightStateAt(const Coord &coord)
         changeLightStateHelper(const_cast<Light &>(affectedLight));
     }
 
-
     //Move was performed.
     ++m_movesCount;
-    
+
     //Check the current game status.
     checkStatus();
 
@@ -143,8 +142,8 @@ int GameCore::getMaxMovesCount() const
 bool GameCore::isValidCoord(const Coord &coord) const
 {
     //Must be inside of bounds of board.
-    return (coord.y >= 0 && coord.y < m_board.size())
-        && (coord.x >= 0 && coord.x < m_board[coord.y].size());
+    return (coord.y >= 0 && coord.y < static_cast<int>(m_board.size()))
+        && (coord.x >= 0 && coord.x < static_cast<int>(m_board[coord.y].size()));
 }
 
 std::string GameCore::ascii() const

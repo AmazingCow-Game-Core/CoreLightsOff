@@ -59,25 +59,25 @@ const char FileLevelLoader::kLightOffChar = '.';
 
 // CTOR/DTOR //
 FileLevelLoader::FileLevelLoader(const std::string &filename) :
-    m_lightsOnCount(0),
+    m_lightsOnCount (0),
     m_lightsOffCount(0)
 {
     std::ifstream infile(filename.c_str());
-    
+
     auto orthogonalCoords = Coord().getOrthogonalCoords();
 
     for(std::string line; std::getline(infile, line); /*None*/ )
     {
         //Create a row of ligths...
         m_board.push_back(std::vector<Light>());
-        
+
         for(auto &ch : line)
-        {        
+        {
             auto isOn = ch == FileLevelLoader::kLightOnChar;
 
             auto light = Light(isOn, orthogonalCoords);
             m_board[m_board.size()-1].push_back(light);
-            
+
             m_lightsOnCount  += (isOn) ? 1 : 0;
             m_lightsOffCount += (isOn) ? 0 : 1;
         }
@@ -89,7 +89,7 @@ FileLevelLoader::~FileLevelLoader()
 }
 
 // Overriden Methods //
-const Board& FileLevelLoader::getBoard() const
+const Light::Board& FileLevelLoader::getBoard() const
 {
     return m_board;
 }

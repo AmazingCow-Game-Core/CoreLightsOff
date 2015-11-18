@@ -43,8 +43,8 @@
 #define __LightsOffCore_include_LightsOffCore_Utils_h__
 
 //All classes of this core is placed inside this namespace.
-//We use MACROS so is easier to change if needed. 
-//Is (in our opinion) more explicit. 
+//We use MACROS so is easier to change if needed.
+//Is (in our opinion) more explicit.
 //And finally the editors will not reformat the code.
 
 #define NS_LIGHTSOFFCORE_BEGIN namespace LightsOffCore {
@@ -53,9 +53,9 @@
 
 //The core version number.
 #define COW_LIGHTSOFFCORE_VERSION_MAJOR    "0"
-#define COW_LIGHTSOFFCORE_VERSION_MINOR    "1"
+#define COW_LIGHTSOFFCORE_VERSION_MINOR    "2"
 #define COW_LIGHTSOFFCORE_VERSION_REVISION "0"
 
-#define COW_LIGHTSOFFCORE_VERSION "0.1.0"
+#define COW_LIGHTSOFFCORE_VERSION "0.2.0"
 
 #endif // defined(__LightsOffCore_include_LightsOffCore_Utils_h__) //

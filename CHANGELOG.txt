@@ -1,0 +1,7 @@
+v0.1.0 - Initial version.
+
+v0.2.0: [November 17 2015]
+- Add doxygen comments.
+- Changed the CoordVec to inside of Coord.
+- Changed the Board to inside of Light.
+- Upgraded the README.

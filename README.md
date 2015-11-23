@@ -3,6 +3,7 @@ Core LightsOff
 Made with <3 by [Amazing Cow](http://www.amazingcow.com).
 
 <!-- ####################################################################### -->
+
 ## Intro:
 
 This is a Game Core for LightsOff Game.   
@@ -10,6 +11,21 @@ You can use it as a "lib" for making LightsOff Game in C++ concentrating
 your efforts in making a cool game interface and letting the logic of the 
 game alone.
 
+
+<!-- ####################################################################### -->
+
+## Dependencies:
+
+This core needs to use the [CoreCoord](http://www.github.com/amazingcow/CoreCoord) 
+lib. The core itself ```#include``` the ```CoreCoord``` without any hardcoded paths
+so you must ensure that you point to the correct include dir in your compiler settings.   
+This is usually done in g++/clang++ like:
+
+```bash
+$ g++ -I/path/to/CoreCoord/ ...
+```
+
+You can find a example in the ```Makefile```.
 
 
 <!-- ####################################################################### -->
@@ -28,6 +44,12 @@ Here is a list of them:
 * ```LightsOffCore_Utils.h```
 * ```Status.h```
 
+
+<!-- ####################################################################### -->
+
+## Usage:
+
+#COWTODO
 
 <!-- ####################################################################### -->
 

@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __Core_LightsOff_include_LightsOffCore_h__
-#define __Core_LightsOff_include_LightsOffCore_h__
+#ifndef __LightsOffCore_include_LightsOffCore_h__
+#define __LightsOffCore_include_LightsOffCore_h__
 
 //This is a umbrella header indented to ease the inclusion of all files
 //needed to use the LightsOff Game Core.
@@ -54,4 +54,4 @@
 #include "ILevelLoader.h"
 #include "FileLevelLoader.h"
 
-#endif // defined(__Core_LightsOff_include_LightsOffCore_h__) //
+#endif // defined(__LightsOffCore_include_LightsOffCore_h__) //

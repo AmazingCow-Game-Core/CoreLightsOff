@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __Core_LightsOff_include_LightsOffCore_Utils_h__
-#define __Core_LightsOff_include_LightsOffCore_Utils_h__
+#ifndef __LightsOffCore_include_LightsOffCore_Utils_h__
+#define __LightsOffCore_include_LightsOffCore_Utils_h__
 
 //All classes of this core is placed inside this namespace.
 //We use MACROS so is easier to change if needed.
@@ -58,4 +58,4 @@
 
 #define COW_LIGHTSOFFCORE_VERSION "0.2.0"
 
-#endif // defined(__Core_LightsOff_include_LightsOffCore_Utils_h__) //
+#endif // defined(__LightsOffCore_include_LightsOffCore_Utils_h__) //

@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __Core_LightsOff_include_FileLevelLoader_h__
-#define __Core_LightsOff_include_FileLevelLoader_h__
+#ifndef __LightsOffCore_include_FileLevelLoader_h__
+#define __LightsOffCore_include_FileLevelLoader_h__
 
 //std
 #include <string>
@@ -96,4 +96,4 @@ private:
 };
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__Core_LightsOff_include_FileLevelLoader_h__) //
+#endif // defined(__LightsOffCore_include_FileLevelLoader_h__) //

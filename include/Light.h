@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __Core_LightsOff_include_Light_h__
-#define __Core_LightsOff_include_Light_h__
+#ifndef __LightsOffCore_include_Light_h__
+#define __LightsOffCore_include_Light_h__
 
 //std
 #include <vector>
@@ -92,4 +92,4 @@ private:
 
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__Core_LightsOff_include_Light_h__) //
+#endif // defined(__LightsOffCore_include_Light_h__) //

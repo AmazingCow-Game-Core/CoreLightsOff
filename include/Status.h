@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __Core_LightsOff_include_Status_h__
-#define __Core_LightsOff_include_Status_h__
+#ifndef __LightsOffCore_include_Status_h__
+#define __LightsOffCore_include_Status_h__
 
 //std
 #include <vector>
@@ -65,4 +65,4 @@ enum class Status
 std::ostream& operator <<(std::ostream &os, Status status);
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__Core_LightsOff_include_Status_h__) //
+#endif // defined(__LightsOffCore_include_Status_h__) //

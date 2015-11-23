@@ -53,9 +53,9 @@
 
 //The core version number.
 #define COW_LIGHTSOFFCORE_VERSION_MAJOR    "0"
-#define COW_LIGHTSOFFCORE_VERSION_MINOR    "2"
+#define COW_LIGHTSOFFCORE_VERSION_MINOR    "3"
 #define COW_LIGHTSOFFCORE_VERSION_REVISION "0"
 
-#define COW_LIGHTSOFFCORE_VERSION "0.2.0"
+#define COW_LIGHTSOFFCORE_VERSION "0.3.0"
 
 #endif // defined(__LightsOffCore_include_LightsOffCore_Utils_h__) //

@@ -41,8 +41,8 @@
 
 //Header
 #include "../include/FileLevelLoader.h"
-//LightsOffCore.
-#include "../include/Coord.h"
+//CoreCoord.
+#include "CoreCoord.h"
 //std
 #include <fstream>
 
@@ -51,7 +51,7 @@ using namespace std;
 
 //Usings.
 USING_NS_LIGHTSOFFCORE;
-
+USING_NS_CORECOORD;
 
 // Constants //
 const char FileLevelLoader::kLightOnChar  = 'o';
@@ -64,7 +64,7 @@ FileLevelLoader::FileLevelLoader(const std::string &filename) :
 {
     std::ifstream infile(filename.c_str());
 
-    auto orthogonalCoords = Coord().getOrthogonalCoords();
+    auto orthogonalCoords = Coord().getOrthogonal();
 
     for(std::string line; std::getline(infile, line); /*None*/ )
     {

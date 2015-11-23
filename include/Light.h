@@ -39,14 +39,15 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_Light_h__
-#define __LightsOffCore_include_Light_h__
+#ifndef __Core_LightsOff_include_Light_h__
+#define __Core_LightsOff_include_Light_h__
 
 //std
 #include <vector>
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
-#include "Coord.h"
+//CoreCoord.
+#include "CoreCoord.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
@@ -65,7 +66,7 @@ public:
     ///@param affectOffsetRange The coords that this light will affect
     ///when its state changes.
     ///@see Light::changeState, Light::isOn, Light::getAffectedOffsetRange.
-    Light(bool on, const Coord::CoordVec &affectOffsetRange);
+    Light(bool on, const CoreCoord::Coord::Vec &affectOffsetRange);
 
 
     // Public Methods //
@@ -80,15 +81,15 @@ public:
     ///@brief Get all the coords that this Light affects
     ///when it changes the state.
     ///@returns The affected range.
-    const Coord::CoordVec& getAffectOffsetRange() const;
+    const CoreCoord::Coord::Vec& getAffectOffsetRange() const;
 
     // iVars //
 private:
-    bool            m_isOn;
-    Coord::CoordVec m_affectOffsetRange;
+    bool                  m_isOn;
+    CoreCoord::Coord::Vec m_affectOffsetRange;
 };
 
 
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_Light_h__) //
+#endif // defined(__Core_LightsOff_include_Light_h__) //

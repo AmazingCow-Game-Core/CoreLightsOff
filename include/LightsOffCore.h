@@ -39,20 +39,19 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_LightsOffCore_h__
-#define __LightsOffCore_include_LightsOffCore_h__
+#ifndef __Core_LightsOff_include_LightsOffCore_h__
+#define __Core_LightsOff_include_LightsOffCore_h__
 
 //This is a umbrella header indented to ease the inclusion of all files
 //needed to use the LightsOff Game Core.
-//While is possible to include each one separately is very easy just to include 
+//While is possible to include each one separately is very easy just to include
 //this file alone and let it makes all the job. :)
 
 #include "LightsOffCore_Utils.h"
 #include "Light.h"
 #include "Status.h"
-#include "Coord.h"
 #include "GameCore.h"
 #include "ILevelLoader.h"
 #include "FileLevelLoader.h"
 
-#endif // defined(__LightsOffCore_include_LightsOffCore_h__) //
+#endif // defined(__Core_LightsOff_include_LightsOffCore_h__) //

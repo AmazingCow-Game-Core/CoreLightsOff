@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_ILevelLoader_h__
-#define __LightsOffCore_include_ILevelLoader_h__
+#ifndef __Core_LightsOff_include_ILevelLoader_h__
+#define __Core_LightsOff_include_ILevelLoader_h__
 
 //LightsOffCore.
 #include "LightsOffCore_Utils.h"
@@ -72,4 +72,4 @@ public:
 };
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_ILevelLoader_h__) //
+#endif // defined(__Core_LightsOff_include_ILevelLoader_h__) //

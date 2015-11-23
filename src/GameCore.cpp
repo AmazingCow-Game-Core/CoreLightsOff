@@ -47,7 +47,7 @@
 
 //Usings.
 USING_NS_LIGHTSOFFCORE;
-
+USING_NS_CORECOORD;
 
 // Constants //
 const int GameCore::kUnlimitedMoves = -1;
@@ -72,10 +72,10 @@ const Light::Board& GameCore::getBoard() const
     return m_board;
 }
 
-Coord::CoordVec GameCore::changeLightStateAt(const Coord &coord)
+Coord::Vec GameCore::changeLightStateAt(const Coord &coord)
 {
     //All coords for lights that changed the state.
-    Coord::CoordVec affectedCoords;
+    Coord::Vec affectedCoords;
 
     //No valid coord, no affected coords.
     //Game is over, no affected coords.

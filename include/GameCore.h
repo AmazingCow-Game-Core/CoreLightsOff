@@ -39,8 +39,8 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_GameCore_h__
-#define __LightsOffCore_include_GameCore_h__
+#ifndef __Core_LightsOff_include_GameCore_h__
+#define __Core_LightsOff_include_GameCore_h__
 
 //std
 #include <string>
@@ -48,8 +48,9 @@
 #include "LightsOffCore_Utils.h"
 #include "Status.h"
 #include "Light.h"
-#include "Coord.h"
 #include "ILevelLoader.h"
+//CoreCoord.
+#include "CoreCoord.h"
 
 NS_LIGHTSOFFCORE_BEGIN
 
@@ -84,14 +85,14 @@ public:
     ///@returns A vector of affected coords, i.e. the coords lights that
     ///changed the state.
     ///@see GameCore::isValidCoord.
-    Coord::CoordVec changeLightStateAt(const Coord &coord);
+    CoreCoord::Coord::Vec changeLightStateAt(const CoreCoord::Coord &coord);
 
 
     ///@brief Gets the light at the given coord.
     ///@param A valid coord, otherwise an exception will be thrown.
     ///@returns The light reference.
     ///@see GameCore::isValidCoord.
-    const Light& getLightAt(const Coord &coord) const;
+    const Light& getLightAt(const CoreCoord::Coord &coord) const;
 
     ///@brief Gets the number of Lights on.
     ///@returns The number of Lights on.
@@ -127,7 +128,7 @@ public:
 
     ///@brief Check if a given coord is inside of Board bounds.
     ///@returns true if coord is valid, false otherwise.
-    bool isValidCoord(const Coord &coord) const;
+    bool isValidCoord(const CoreCoord::Coord &coord) const;
 
 
     ///@brief Return a nice string representation.
@@ -152,4 +153,4 @@ private:
 };
 
 NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_GameCore_h__) //
+#endif // defined(__Core_LightsOff_include_GameCore_h__) //

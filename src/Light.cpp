@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        Light.cpp                                 //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -43,7 +43,7 @@
 #include "../include/Light.h"
 
 //Usings.
-USING_NS_LIGHTSOFFCORE;
+USING_NS_CORELIGHTSOFF;
 USING_NS_CORECOORD;
 
 // CTOR/DTOR //

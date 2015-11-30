@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        GameCore.cpp                              //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -46,7 +46,7 @@
 #include <sstream>
 
 //Usings.
-USING_NS_LIGHTSOFFCORE;
+USING_NS_CORELIGHTSOFF;
 USING_NS_CORECOORD;
 
 // Constants //

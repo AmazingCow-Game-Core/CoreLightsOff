@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        Status.cpp                                //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -43,10 +43,10 @@
 #include "../include/Status.h"
 
 //Usings
-USING_NS_LIGHTSOFFCORE;
+USING_NS_CORELIGHTSOFF;
 
 // Enums //
-std::ostream& LightsOffCore::operator <<(std::ostream &os, Status status)
+std::ostream& CoreLightsOff::operator <<(std::ostream &os, Status status)
 {
     os << ((status == Status::Continue) ? "Status::Continue" :
            (status == Status::Defeat  ) ? "Status::Defeat"   :

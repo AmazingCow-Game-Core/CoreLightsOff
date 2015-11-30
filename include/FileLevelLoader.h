@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        FileLevelLoader.h                         //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -39,17 +39,17 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_FileLevelLoader_h__
-#define __LightsOffCore_include_FileLevelLoader_h__
+#ifndef __CoreLightsOff_include_FileLevelLoader_h__
+#define __CoreLightsOff_include_FileLevelLoader_h__
 
 //std
 #include <string>
-//LightsOffCore.
-#include "LightsOffCore_Utils.h"
+//CoreLightsOff
+#include "CoreLightsOff_Utils.h"
 #include "Light.h"
 #include "ILevelLoader.h"
 
-NS_LIGHTSOFFCORE_BEGIN
+NS_CORELIGHTSOFF_BEGIN
 
 class FileLevelLoader : public ILevelLoader
 {
@@ -95,5 +95,5 @@ private:
     int          m_lightsOffCount;
 };
 
-NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_FileLevelLoader_h__) //
+NS_CORELIGHTSOFF_END
+#endif // defined(__CoreLightsOff_include_FileLevelLoader_h__) //

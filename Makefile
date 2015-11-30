@@ -4,7 +4,7 @@
 ##             ██        ██                                                   ##
 ##            ███  █  █  ███                                                  ##
 ##            █ █        █ █        Makefile                                  ##
-##             ████████████         LightsOff Core                            ##
+##             ████████████         CoreLightsOff                             ##
 ##           █              █       Copyright (c) 2015 AmazingCow             ##
 ##          █     █    █     █      www.AmazingCow.com                        ##
 ##          █     █    █     █                                                ##
@@ -59,7 +59,7 @@ obj:
 bin:
 	mkdir -p ./bin
 
-	g++ -std=c++11 -D__AMAZINGCORE_LIGHTSOFFCORE_TEST_ENABLED__ \
+	g++ -std=c++11 -D__AMAZINGCORE_CORELIGHTSOFF_TEST_ENABLED__ \
 				   -I./lib/CoreCoord/include  					\
 				   ./lib/CoreCoord/src/*.cpp  					\
 				   ./src/*.cpp 				  					\

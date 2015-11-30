@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        main.cpp                                  //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -40,20 +40,20 @@
 //----------------------------------------------------------------------------//
 
 
-//This guard is to ease the usage of the LightsOffCore,
+//This guard is to ease the usage of the CoreLightsOff,
 //so it's users won't need to worry about removing any files
 //since is very unlikely that this flag is defined elsewhere.
-#ifdef __AMAZINGCORE_LIGHTSOFFCORE_TEST_ENABLED__
+#ifdef __AMAZINGCORE_CORELIGHTSOFF_TEST_ENABLED__
 
 #include <iostream>
-#include "../include/LightsOffCore.h"
+#include "../include/CoreLightsOff.h"
 
-USING_NS_LIGHTSOFFCORE;
+USING_NS_CORELIGHTSOFF;
 using namespace std;
 
 void usage()
 {
-    cout << "Amazing Cow - LightsOffCore Test Game" << endl;
+    cout << "Amazing Cow - CoreLightsOff Test Game" << endl;
     cout << "Usage:" << endl;
     cout << "  <binary-name> <path-of-game-board>" << endl;
     cout << "Ex: ./testgame ./test_game/game.txt" << endl;
@@ -87,4 +87,4 @@ int main(int argc, const char *argv[])
     }
 }
 
-#endif // __AMAZINGCORE_LIGHTSOFFCORE_TEST_ENABLED__ //
+#endif // __AMAZINGCORE_CORELIGHTSOFF_TEST_ENABLED__ //

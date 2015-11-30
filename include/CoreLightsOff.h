@@ -3,8 +3,8 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        LightsOffCore.h                           //
-//             ████████████         LightsOff Core                            //
+//            █ █        █ █        CoreLightsOff.h                           //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -39,19 +39,19 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_LightsOffCore_h__
-#define __LightsOffCore_include_LightsOffCore_h__
+#ifndef __CoreLightsOff_include_CoreLightsOff_h__
+#define __CoreLightsOff_include_CoreLightsOff_h__
 
 //This is a umbrella header indented to ease the inclusion of all files
 //needed to use the LightsOff Game Core.
 //While is possible to include each one separately is very easy just to include
 //this file alone and let it makes all the job. :)
 
-#include "LightsOffCore_Utils.h"
+#include "CoreLightsOff_Utils.h"
 #include "Light.h"
 #include "Status.h"
 #include "GameCore.h"
 #include "ILevelLoader.h"
 #include "FileLevelLoader.h"
 
-#endif // defined(__LightsOffCore_include_LightsOffCore_h__) //
+#endif // defined(__CoreLightsOff_include_CoreLightsOff_h__) //

@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        FileLevelLoader.cpp                       //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -50,7 +50,7 @@
 using namespace std;
 
 //Usings.
-USING_NS_LIGHTSOFFCORE;
+USING_NS_CORELIGHTSOFF;
 USING_NS_CORECOORD;
 
 // Constants //

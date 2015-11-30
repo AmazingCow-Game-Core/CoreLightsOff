@@ -4,7 +4,7 @@
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
 //            █ █        █ █        GameCore.h                                //
-//             ████████████         LightsOff Core                            //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -39,20 +39,20 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_GameCore_h__
-#define __LightsOffCore_include_GameCore_h__
+#ifndef __CoreLightsOff_include_GameCore_h__
+#define __CoreLightsOff_include_GameCore_h__
 
 //std
 #include <string>
-//LightsOffCore.
-#include "LightsOffCore_Utils.h"
+//CoreLightsOff.
+#include "CoreLightsOff_Utils.h"
 #include "Status.h"
 #include "Light.h"
 #include "ILevelLoader.h"
 //CoreCoord.
 #include "CoreCoord.h"
 
-NS_LIGHTSOFFCORE_BEGIN
+NS_CORELIGHTSOFF_BEGIN
 
 class GameCore
 {
@@ -152,5 +152,5 @@ private:
     int m_maxMovesCount;
 };
 
-NS_LIGHTSOFFCORE_END
-#endif // defined(__LightsOffCore_include_GameCore_h__) //
+NS_CORELIGHTSOFF_END
+#endif // defined(__CoreLightsOff_include_GameCore_h__) //

@@ -35,13 +35,12 @@ You can find a example in the ```Makefile```.
 We tried to separated the files in a very organized form.   
 Here is a list of them:
 
-* ```Coord.h```
+* ```CoreLightsOff.h```
+* ```CoreLightsOff_Utils.h```
 * ```FileLevelLoader.h```
 * ```GameCore.h```
 * ```ILevelLoader.h```
 * ```Light.h```
-* ```LightsOffCore.h```
-* ```LightsOffCore_Utils.h```
 * ```Status.h```
 
 

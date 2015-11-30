@@ -3,8 +3,8 @@
 //               ████████                                                     //
 //             ██        ██                                                   //
 //            ███  █  █  ███                                                  //
-//            █ █        █ █        LightsOffCore_Utils.h                     //
-//             ████████████         LightsOff Core                            //
+//            █ █        █ █        CoreLightsOff_Utils.h                     //
+//             ████████████         CoreLightsOff                             //
 //           █              █       Copyright (c) 2015 AmazingCow             //
 //          █     █    █     █      www.AmazingCow.com                        //
 //          █     █    █     █                                                //
@@ -39,23 +39,23 @@
 //                                  Enjoy :)                                  //
 //----------------------------------------------------------------------------//
 
-#ifndef __LightsOffCore_include_LightsOffCore_Utils_h__
-#define __LightsOffCore_include_LightsOffCore_Utils_h__
+#ifndef __CoreLightsOff_include_CoreLightsOff_Utils_h__
+#define __CoreLightsOff_include_CoreLightsOff_Utils_h__
 
 //All classes of this core is placed inside this namespace.
 //We use MACROS so is easier to change if needed.
 //Is (in our opinion) more explicit.
 //And finally the editors will not reformat the code.
 
-#define NS_LIGHTSOFFCORE_BEGIN namespace LightsOffCore {
-#define NS_LIGHTSOFFCORE_END   }
-#define USING_NS_LIGHTSOFFCORE using namespace LightsOffCore
+#define NS_CORELIGHTSOFF_BEGIN namespace CoreLightsOff {
+#define NS_CORELIGHTSOFF_END   }
+#define USING_NS_CORELIGHTSOFF using namespace CoreLightsOff
 
 //The core version number.
-#define COW_LIGHTSOFFCORE_VERSION_MAJOR    "0"
-#define COW_LIGHTSOFFCORE_VERSION_MINOR    "3"
-#define COW_LIGHTSOFFCORE_VERSION_REVISION "0"
+#define COW_CORELIGHTSOFF_VERSION_MAJOR    "0"
+#define COW_CORELIGHTSOFF_VERSION_MINOR    "4"
+#define COW_CORELIGHTSOFF_VERSION_REVISION "0"
 
-#define COW_LIGHTSOFFCORE_VERSION "0.3.0"
+#define COW_CORELIGHTSOFF_VERSION "0.4.0"
 
-#endif // defined(__LightsOffCore_include_LightsOffCore_Utils_h__) //
+#endif // defined(__CoreLightsOff_include_CoreLightsOff_Utils_h__) //

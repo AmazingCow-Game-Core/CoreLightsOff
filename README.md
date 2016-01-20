@@ -46,12 +46,6 @@ Here is a list of them:
 
 <!-- ####################################################################### -->
 
-## Usage:
-
-#COWTODO
-
-<!-- ####################################################################### -->
-
 ## More info:
 
 We tried to document the Core extensively, so we think that is pretty ease to 

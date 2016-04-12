@@ -1,20 +1,49 @@
-v0.1.0 - Initial version.
+--------------------------------------------------------------------------------
+v0.5.1 - [April 10 2016]
+    - Fix the CoreCoord git submodule.
+    - Make the include headers sorted.
+    - Update the version numbers.
+    - Make some cosmetic changes (Alignment, spacing...).
+    - Remove the unneeded headers (iostream)
 
+    - Make some cosmetic changes in Makefile.
+
+    - Update the README
+        - Add info about cowtodo in TODO section.
+        - Change the Dependencies section.
+        - Add separators.
+
+    - Update the CHANGELOG.
+        - Reverse the sort order (new entries at top).
+        - Add separators.
+
+--------------------------------------------------------------------------------
+v0.4.1: [January 20 2016]
+- Update the license headers.
+- Remove the usage section on README.
+
+--------------------------------------------------------------------------------
+v0.4.0: [November 30 2015]
+- Change the project name from LightsOffCore to CoreLights off to follow
+  the convention of Amazing Cow games.
+
+
+--------------------------------------------------------------------------------
+v0.3.0: [November 23 2015]
+- Move to CoreCoord (Same stuff of old Coord class but in a separated lib).
+- Create a Makefile to ease the build of Core.
+- Create Test game code.
+
+
+--------------------------------------------------------------------------------
 v0.2.0: [November 17 2015]
 - Add doxygen comments.
 - Changed the CoordVec to inside of Coord.
 - Changed the Board to inside of Light.
 - Upgraded the README.
 
-v0.3.0: [November 23 2015]
-- Move to CoreCoord (Same stuff of old Coord class but in a separated lib).
-- Create a Makefile to ease the build of Core.
-- Create Test game code.
+--------------------------------------------------------------------------------
+v0.1.0 - Initial version.
 
-v0.4.0: [November 30 2015]
-- Change the project name from LightsOffCore to CoreLights off to follow 
-  the convention of Amazing Cow games.
-  
-v0.4.1: [January 20 2016]
-- Update the license headers.
-- Remove the usage section on README.
+
+

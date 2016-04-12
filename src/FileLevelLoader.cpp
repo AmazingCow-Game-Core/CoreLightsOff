@@ -45,16 +45,15 @@
 //std
 #include <fstream>
 
-#include <iostream>
-using namespace std;
-
 //Usings.
 USING_NS_CORELIGHTSOFF;
 USING_NS_CORECOORD;
 
+
 // Constants //
 const char FileLevelLoader::kLightOnChar  = 'o';
 const char FileLevelLoader::kLightOffChar = '.';
+
 
 // CTOR/DTOR //
 FileLevelLoader::FileLevelLoader(const std::string &filename) :
@@ -82,10 +81,12 @@ FileLevelLoader::FileLevelLoader(const std::string &filename) :
         }
     }
 }
+
 FileLevelLoader::~FileLevelLoader()
 {
     //Empty...
 }
+
 
 // Overriden Methods //
 const Light::Board& FileLevelLoader::getBoard() const

@@ -40,7 +40,6 @@
 
 //Header
 #include "../include/GameCore.h"
-
 //std
 #include <sstream>
 
@@ -48,22 +47,25 @@
 USING_NS_CORELIGHTSOFF;
 USING_NS_CORECOORD;
 
+
 // Constants //
 const int GameCore::kUnlimitedMoves = -1;
+
 
 // CTOR/DTOR //
 GameCore::GameCore(const ILevelLoader &loader,
                    int maxMoves /* = kUnlimitedMoves */) :
 
-    m_board        (loader.getBoard()),
-    m_lightsOnCount(loader.getLightsOnCount()),
-    m_lightOffCount(loader.getLightsOffCount()),
-    m_status       (Status::Continue),
-    m_movesCount   (0),
-    m_maxMovesCount(maxMoves)
+    m_board         (loader.getBoard()),
+    m_lightsOnCount (loader.getLightsOnCount()),
+    m_lightOffCount (loader.getLightsOffCount()),
+    m_status        (Status::Continue),
+    m_movesCount    (0),
+    m_maxMovesCount (maxMoves)
 {
     //Empty...
 }
+
 
 // Public Methods //
 const Light::Board& GameCore::getBoard() const
@@ -160,6 +162,7 @@ std::string GameCore::ascii() const
 
     return ss.str();
 }
+
 
 // Private Methods //
 void GameCore::changeLightStateHelper(Light &light)

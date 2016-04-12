@@ -45,13 +45,14 @@
 #include "CoreLightsOff_Utils.h"
 #include "Light.h"
 
+
 NS_CORELIGHTSOFF_BEGIN
 
 class ILevelLoader
 {
     // CTOR/DTOR //
 public:
-    ILevelLoader() { /* Empty */ }
+    ILevelLoader()          { /* Empty */ }
     virtual ~ILevelLoader() { /* Empty */ }
 
 
@@ -69,6 +70,7 @@ public:
     ///@returns The number of lights off.
     virtual int getLightsOffCount() const = 0;
 };
+
 
 NS_CORELIGHTSOFF_END
 #endif // defined(__CoreLightsOff_include_ILevelLoader_h__) //

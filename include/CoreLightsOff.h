@@ -47,10 +47,10 @@
 //this file alone and let it makes all the job. :)
 
 #include "CoreLightsOff_Utils.h"
-#include "Light.h"
-#include "Status.h"
+#include "FileLevelLoader.h"
 #include "GameCore.h"
 #include "ILevelLoader.h"
-#include "FileLevelLoader.h"
+#include "Light.h"
+#include "Status.h"
 
 #endif // defined(__CoreLightsOff_include_CoreLightsOff_h__) //

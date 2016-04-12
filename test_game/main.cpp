@@ -50,6 +50,7 @@
 USING_NS_CORELIGHTSOFF;
 using namespace std;
 
+
 void usage()
 {
     cout << "Amazing Cow - CoreLightsOff Test Game" << endl;

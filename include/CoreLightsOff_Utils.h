@@ -52,9 +52,9 @@
 
 //The core version number.
 #define COW_CORELIGHTSOFF_VERSION_MAJOR    "0"
-#define COW_CORELIGHTSOFF_VERSION_MINOR    "4"
+#define COW_CORELIGHTSOFF_VERSION_MINOR    "5"
 #define COW_CORELIGHTSOFF_VERSION_REVISION "1"
 
-#define COW_CORELIGHTSOFF_VERSION "0.4.1"
+#define COW_CORELIGHTSOFF_VERSION "0.5.1"
 
 #endif // defined(__CoreLightsOff_include_CoreLightsOff_Utils_h__) //

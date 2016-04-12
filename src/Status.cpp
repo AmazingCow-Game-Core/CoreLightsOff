@@ -44,6 +44,7 @@
 //Usings
 USING_NS_CORELIGHTSOFF;
 
+
 // Enums //
 std::ostream& CoreLightsOff::operator <<(std::ostream &os, Status status)
 {

@@ -48,6 +48,7 @@
 //CoreCoord.
 #include "CoreCoord.h"
 
+
 NS_CORELIGHTSOFF_BEGIN
 
 class Light
@@ -82,12 +83,12 @@ public:
     ///@returns The affected range.
     const CoreCoord::Coord::Vec& getAffectOffsetRange() const;
 
+
     // iVars //
 private:
     bool                  m_isOn;
     CoreCoord::Coord::Vec m_affectOffsetRange;
 };
-
 
 
 NS_CORELIGHTSOFF_END

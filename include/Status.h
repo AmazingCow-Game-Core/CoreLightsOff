@@ -42,10 +42,11 @@
 #define __CoreLightsOff_include_Status_h__
 
 //std
-#include <vector>
 #include <ostream>
+#include <vector>
 //CoreLightsOff.
 #include "CoreLightsOff_Utils.h"
+
 
 NS_CORELIGHTSOFF_BEGIN
 
@@ -62,6 +63,7 @@ enum class Status
 ///@brief Output the name of status. (ex: Status::Victory)
 ///@see Status.
 std::ostream& operator <<(std::ostream &os, Status status);
+
 
 NS_CORELIGHTSOFF_END
 #endif // defined(__CoreLightsOff_include_Status_h__) //

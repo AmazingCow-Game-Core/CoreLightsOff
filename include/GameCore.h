@@ -45,11 +45,12 @@
 #include <string>
 //CoreLightsOff.
 #include "CoreLightsOff_Utils.h"
-#include "Status.h"
-#include "Light.h"
 #include "ILevelLoader.h"
+#include "Light.h"
+#include "Status.h"
 //CoreCoord.
 #include "CoreCoord.h"
+
 
 NS_CORELIGHTSOFF_BEGIN
 
@@ -133,10 +134,12 @@ public:
     ///@brief Return a nice string representation.
     std::string ascii() const;
 
+
     // Private Methods //
 private:
     void changeLightStateHelper(Light &light);
     void checkStatus();
+
 
     // iVars //
 private:
@@ -150,6 +153,7 @@ private:
     int m_movesCount;
     int m_maxMovesCount;
 };
+
 
 NS_CORELIGHTSOFF_END
 #endif // defined(__CoreLightsOff_include_GameCore_h__) //

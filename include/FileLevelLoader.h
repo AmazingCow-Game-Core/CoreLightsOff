@@ -45,8 +45,9 @@
 #include <string>
 //CoreLightsOff
 #include "CoreLightsOff_Utils.h"
-#include "Light.h"
 #include "ILevelLoader.h"
+#include "Light.h"
+
 
 NS_CORELIGHTSOFF_BEGIN
 
@@ -92,7 +93,9 @@ private:
     Light::Board m_board;
     int          m_lightsOnCount;
     int          m_lightsOffCount;
+
 };
+
 
 NS_CORELIGHTSOFF_END
 #endif // defined(__CoreLightsOff_include_FileLevelLoader_h__) //

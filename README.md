@@ -3,6 +3,7 @@ Core LightsOff
 Made with <3 by [Amazing Cow](http://www.amazingcow.com).
 
 <!-- ####################################################################### -->
+<!-- ####################################################################### -->
 
 ## Intro:
 
@@ -12,22 +13,8 @@ your efforts in making a cool game interface and letting the logic of the
 game alone.
 
 
+
 <!-- ####################################################################### -->
-
-## Dependencies:
-
-This core needs to use the [CoreCoord](http://www.github.com/amazingcow/CoreCoord) 
-lib. The core itself ```#include``` the ```CoreCoord``` without any hardcoded paths
-so you must ensure that you point to the correct include dir in your compiler settings.   
-This is usually done in g++/clang++ like:
-
-```bash
-$ g++ -I/path/to/CoreCoord/ ...
-```
-
-You can find a example in the ```Makefile```.
-
-
 <!-- ####################################################################### -->
 
 ## Files:
@@ -44,6 +31,17 @@ Here is a list of them:
 * ```Status.h```
 
 
+
+<!-- ####################################################################### -->
+<!-- ####################################################################### -->
+
+## Dependencies:
+
+* This project uses AmazingCow's [CoreCoord](http://www.github.com/AmazingCow-Game-Core/CoreCoord).
+
+
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## More info:
@@ -54,19 +52,40 @@ Anyway if you didn't understand something let us know sending a mail to
 ***help_opensource@amazingcow.com***  with the subject filled with the
 name of this repo.
 
+We also add a **simple**, **dummy** test game in ```./test_game/main.cpp``` to 
+help the understanding of the Core.
 
+
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## License:
+
 This software is released under GPLv3.
 
 
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## TODO:
-Check the TODO file.
+
+Check the TODO file for general things.
+
+This projects uses the COWTODO tags.   
+So install [cowtodo](http://www.github.com/AmazingCow-Tools/COWTODO.html) and run:
+
+``` bash
+$ cd CoreGenius
+$ cowtodo 
+```
+
+That's gonna give you all things to do :D.
 
 
+
+<!-- ####################################################################### -->
 <!-- ####################################################################### -->
 
 ## Others:

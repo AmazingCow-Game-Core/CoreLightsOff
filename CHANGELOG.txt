@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-v0.5.1 - [April 10 2016]
+v0.5.1 - [April 11 2016]
     - Fix the CoreCoord git submodule.
     - Make the include headers sorted.
     - Update the version numbers.

@@ -49,18 +49,22 @@ clean:
 #Create the object files for Core.
 obj:
 	mkdir -p ./obj
-	g++ -std=c++11 -c -I./lib/CoreCoord/include  \
-				   ./lib/CoreCoord/src/*.cpp     \
-				   ./src/*.cpp
+
+	g++ -std=c++11 -c             \
+	    -I./lib/CoreCoord/include \
+	    ./lib/CoreCoord/src/*.cpp \
+	    ./src/*.cpp
+
 	mv *.o ./obj/
 
 #Create a test executable
 bin:
 	mkdir -p ./bin
 
-	g++ -std=c++11 -D__AMAZINGCORE_CORELIGHTSOFF_TEST_ENABLED__ \
-				   -I./lib/CoreCoord/include  					\
-				   ./lib/CoreCoord/src/*.cpp  					\
-				   ./src/*.cpp 				  					\
-				   ./test_game/main.cpp 	  					\
-				   -o ./bin/testgame
+	g++ -std=c++11                                   \
+	    -D__AMAZINGCORE_CORELIGHTSOFF_TEST_ENABLED__ \
+	    -I./lib/CoreCoord/include                    \
+	    ./lib/CoreCoord/src/*.cpp                    \
+	    ./src/*.cpp                                  \
+	    ./test_game/main.cpp                         \
+	    -o ./bin/testgame

@@ -44,6 +44,7 @@
 #include "CoreCoord.h"
 //std
 #include <fstream>
+#include <system_error>
 
 //Usings.
 USING_NS_CORELIGHTSOFF;
@@ -62,11 +63,18 @@ FileLevelLoader::FileLevelLoader(const std::string &filename) :
 {
     std::ifstream infile(filename.c_str());
 
+    //Check file existence.
+    if(!infile)
+    {
+        auto errcode = std::make_error_code(std::errc::no_such_file_or_directory);
+        throw std::system_error(errcode, filename);
+    }
+
     auto orthogonalCoords = Coord().getOrthogonal();
 
     for(std::string line; std::getline(infile, line); /*None*/ )
     {
-        //Create a row of ligths...
+        //Create a row of lights...
         m_board.push_back(std::vector<Light>());
 
         for(auto &ch : line)

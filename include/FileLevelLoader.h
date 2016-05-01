@@ -56,15 +56,22 @@ class FileLevelLoader : public ILevelLoader
     // Constants //
 public:
     ///@brief The char that represents the Light On.
+    ///@note To this class loads the board correctly the file MUST
+    ///      represents the on light with this char.
     static const char kLightOnChar;
 
     ///@brief The char that represents the Light Off.
+    ///@note To this class loads the board correctly the file MUST
+    ///      represents the on light with this char.
     static const char kLightOffChar;
 
 
     // CTOR/DTOR //
 public:
     ///@brief Loads the Board from file located in filename.
+    ///@throws
+    ///     std::system_error exception if it cannot open a
+    ///     file with the given filename.
     FileLevelLoader(const std::string &filename);
 
     ///@brief Virtual destructor.

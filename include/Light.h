@@ -62,9 +62,11 @@ public:
     // CTOR/DTOR //
 public:
     ///@brief Constructs a Light.
-    ///@param on If the Light state is on at beginning.
-    ///@param affectOffsetRange The coords that this light will affect
-    ///when its state changes.
+    ///@param on
+    //      If the Light state is on at beginning.
+    ///@param affectOffsetRange
+    //      The coords that this light will affect
+    ///     when its state changes.
     ///@see Light::changeState, Light::isOn, Light::getAffectedOffsetRange.
     Light(bool on, const CoreCoord::Coord::Vec &affectOffsetRange);
 
@@ -78,8 +80,9 @@ public:
     ///@returns true if Light is on, false otherwise.
     bool isOn() const;
 
-    ///@brief Get all the coords that this Light affects
-    ///when it changes the state.
+    ///@brief
+    ///     Get all the coords that this Light affects
+    ///     when it changes the state.
     ///@returns The affected range.
     const CoreCoord::Coord::Vec& getAffectOffsetRange() const;
 

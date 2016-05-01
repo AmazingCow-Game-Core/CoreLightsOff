@@ -66,10 +66,15 @@ public:
     // CTOR/DTOR //
 public:
     ///@brief Constructs the GameCore.
-    ///@param loader A ILevelLoader subclass that loads the board.
-    ///@param maxMoves How many tries player has to win the game -
-    ///Default GameCore::kUnlimitedMoves
-    ///@see GameCore::kUnlimitedMoves
+    ///@param loader
+    ///     A ILevelLoader subclass that loads the board.
+    ///@param maxMoves
+    //      How many tries player has to win the game -
+    ///     Default GameCore::kUnlimitedMoves
+    ///@note
+    ///     If the loader throws an exception, it will NOT be
+    ///     by the GameCore - So is users reponsability to handle them.
+    ///@see GameCore::kUnlimitedMoves, ILevelLoader, FileLevelLoader.
     GameCore(const ILevelLoader &loader, int maxMoves = kUnlimitedMoves);
 
 
@@ -81,16 +86,20 @@ public:
 
 
     ///@brief Change the state of Light at coord.
-    ///@param coord A valid coord, otherwise nothing will be done.
-    ///@returns A vector of affected coords, i.e. the coords lights that
-    ///changed the state.
+    ///@param coord
+    ///     A valid coord, otherwise nothing will be done.
+    ///@returns
+    ///     A vector of affected coords, i.e. the coords lights that
+    ///     changed the state.
     ///@see GameCore::isValidCoord.
     CoreCoord::Coord::Vec changeLightStateAt(const CoreCoord::Coord &coord);
 
 
     ///@brief Gets the light at the given coord.
-    ///@param A valid coord, otherwise an exception will be thrown.
-    ///@returns The light reference.
+    ///@param coord
+    ///     A valid coord, otherwise an exception will be thrown.
+    ///@returns
+    ///     The light reference.
     ///@see GameCore::isValidCoord.
     const Light& getLightAt(const CoreCoord::Coord &coord) const;
 
@@ -107,22 +116,26 @@ public:
 
     ///@brief Get the current status of game.
     ///@returns the current status of game.
-    ///@see Status, GameCore::getMovesCount,
-    ///GameCore::getMaxMovesCount, GameCore::kUnlimitedMoves.
+    ///@see
+    ///     Status, GameCore::getMovesCount,
+    ///     GameCore::getMaxMovesCount, GameCore::kUnlimitedMoves.
     Status getStatus() const;
 
 
     ///@brief Get how many moves the player did so far.
     ///@returns The number of player's moves.
-    ///@see Status, GameCore::getMaxMovesCount,
-    ///GameCore::kUnlimitedMoves.
+    ///@see
+    ///     Status, GameCore::getMaxMovesCount,
+    ///     GameCore::kUnlimitedMoves.
     int getMovesCount() const;
 
     ///@brief Get how many moves the player can do.
-    ///@returns The number of moves or GameCore::kUnlimitedMoves
-    ///if there is no restriction..
-    ///@see Status, GameCore::getMovesCount,
-    ///GameCore::kUnlimitedMoves
+    ///@returns
+    ///     The number of moves or GameCore::kUnlimitedMoves
+    ///     if there is no restriction..
+    ///@see
+    ///     Status, GameCore::getMovesCount,
+    ///     GameCore::kUnlimitedMoves
     int getMaxMovesCount() const;
 
 
